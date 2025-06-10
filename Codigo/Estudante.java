@@ -1,5 +1,17 @@
 package Codigo;
 
-public class Estudante {
+import java.time.LocalDateTime;
+
+public class Estudante extends Pessoa {
+    private String matricula;
+
+    public Estudante(String nome, String cpf, LocalDateTime dataNascimento, String matricula) {
+        super(nome, cpf, dataNascimento);
+        this.matricula = matricula;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
     
 }

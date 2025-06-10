@@ -1,11 +1,35 @@
 package Codigo;
 
+import java.time.LocalDateTime;
+
 public class Apresentacao {
-    //Todos os atributos até o momento;
     private Projeto projeto;
     private Banca banca;
-    private local Sala;
-    private dataHora LocalDateTime;
+    private Sala local;
+    private LocalDateTime dataHora;
+
+    public Apresentacao(Projeto projeto, Banca banca, Sala local, LocalDateTime dataHora) {
+        this.projeto = projeto;
+        this.banca = banca;
+        this.local = local;
+        this.dataHora = dataHora;
+    }
+
+    public Projeto getProjeto() {
+        return projeto;
+    }
+
+    public Banca getBanca() {
+        return banca;
+    }
+
+    public Sala getLocal() {
+        return local;
+    }
+
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
 
     public void avaliar() {
         // Lógica para avaliar a apresentação
