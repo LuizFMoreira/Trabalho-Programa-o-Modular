@@ -18,7 +18,11 @@ public class Banca {
     public Map<Jurado, Integer> getJurados() {
          return jurados;
      }
-    
+     
+     public void addJurado(Jurado j){
+        jurados.put(j,j.getId());
+     }
+
      public void CalcularNotaFinal() {
         
     }

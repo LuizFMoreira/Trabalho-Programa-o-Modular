@@ -20,7 +20,6 @@ public abstract class Instituicao {
     }
 
     public void addPessoa(Pessoa p){
-        
-
+        pessoas.add(p);
     }
 }

@@ -1,6 +1,7 @@
 package Codigo;
 
 public class Projeto {
+    private String nome;
     private Profissional orientador;
     private Equipe equipe;
     private int notaFinal;
@@ -22,6 +23,6 @@ public class Projeto {
     public int getNotaFinal() {
         return notaFinal;
     }
-
+    
     
 }
