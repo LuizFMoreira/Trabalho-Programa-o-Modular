@@ -33,8 +33,5 @@ public class Apresentacao {
 
     public void avaliar(Jurado jurado, double nota) {
         banca.gerarFeedback();
-        
-
     }
-    
 }

@@ -1,42 +1,34 @@
 package Codigo;
 
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Banca implements Avaliavel {
+public class Banca {
     private Projeto projetoAvaliado;
-    private Map<Jurado, Integer> jurados;
-    private String feedback;
+    private List<Jurado> jurados;
 
-     public Banca(Projeto projetoAvaliado, Map<Jurado, Integer> jurados) {
+    public Banca(Projeto projetoAvaliado) {
         this.projetoAvaliado = projetoAvaliado;
-        this.jurados = jurados;
-    }
-    
-    public Projeto getProjetoAvaliado() {
-        return projetoAvaliado;
+        this.jurados = new ArrayList<>();
     }
 
-    public Map<Jurado, Integer> getJurados() {
-         return jurados;
-     }
-     
-     public void addJurado(Jurado j){
-        jurados.put(j,j.getId());
-     }
+    // Adiciona jurado à banca
+    public void adicionarJurado(Jurado jurado) {
+        jurados.add(jurado);
+    }
 
-     public double calcularNota(){
-        int soma=0;
-        int cn=0;
-        for (Map.Entry<Jurado, Integer> m : jurados.entrySet()) {
-            int nota = m.getValue();
-            soma+= nota;
-            cn++;
+    // Calcula a nota final do projeto com base na média das notas dos jurados
+    public void calcularNotaFinal() {
+        double totalNota = 0;
+        for (Jurado j : jurados) {
+            totalNota += j.getNota();
         }
-        return soma/cn;
+        double notaFinal = totalNota / jurados.size();
+        projetoAvaliado.setNotaFinal((int) notaFinal);
     }
-    public String gerarFeedback() {
-        this.feedback = "Apresentação do projeto: " + projetoAvaliado.getNome() + 
-                       " obteve nota " + calcularNota();
-        return feedback;
-    }  
+
+    public void gerarFeedback() {
+        // Lógica para gerar feedback para o projeto
+        System.out.println("Feedback gerado para o projeto " + projetoAvaliado.getNome());
+    }
 }

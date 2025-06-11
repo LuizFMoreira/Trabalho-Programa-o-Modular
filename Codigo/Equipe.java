@@ -1,27 +1,36 @@
 package Codigo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Equipe {
-     private List<Estudante> membros;
+    private String nome;
+    private List<Estudante> membros;
+    private Projeto projeto;
 
-     public Equipe(List<Estudante> membros) {
-          this.membros = membros;
-     }
+    public Equipe(String nome) {
+        this.nome = nome;
+        this.membros = new ArrayList<>();
+    }
 
-     public List<Estudante> getMembros() {
-          return membros;
-     }
+    // Adiciona membro à equipe
+    public void adicionarMembro(Estudante estudante) {
+        membros.add(estudante);
+    }
 
-     public void addMembros(Estudante e){
-          membros.add(e);
-     }
-     public void removeMembro(Estudante e){
-          for(Estudante a: membros){
-               if(a.getMatricula().equals(e.getMatricula())){
-                    membros.remove(a);
-               }
-          }
-     }
+    public String getNome() {
+        return nome;
+    }
 
+    public List<Estudante> getMembros() {
+        return membros;
+    }
+
+    public Projeto getProjeto() {
+        return projeto;
+    }
+
+    public void setProjeto(Projeto projeto) {
+        this.projeto = projeto;
+    }
 }

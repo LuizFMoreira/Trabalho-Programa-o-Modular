@@ -5,11 +5,11 @@ public class Projeto {
     private Profissional orientador;
     private Equipe equipe;
     private int notaFinal;
-    
-    public Projeto(Profissional orientador, Equipe equipe, int notaFinal) {
+
+    public Projeto(String nome, Profissional orientador, Equipe equipe) {
+        this.nome = nome;
         this.orientador = orientador;
         this.equipe = equipe;
-        this.notaFinal = notaFinal;
     }
 
     public Profissional getOrientador() {
@@ -24,9 +24,11 @@ public class Projeto {
         return notaFinal;
     }
 
+    public void setNotaFinal(int notaFinal) {
+        this.notaFinal = notaFinal;
+    }
+
     public String getNome() {
         return nome;
     }
-    
-    
 }
