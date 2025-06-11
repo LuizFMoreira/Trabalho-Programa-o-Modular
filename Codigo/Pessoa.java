@@ -1,13 +1,13 @@
 package Codigo;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public abstract class Pessoa {
     protected String nome;
     protected String cpf;
-    protected LocalDateTime dataNascimento;
+    protected LocalDate dataNascimento;
     
-    public Pessoa(String nome, String cpf, LocalDateTime dataNascimento) {
+    public Pessoa(String nome, String cpf, LocalDate dataNascimento) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
@@ -21,7 +21,7 @@ public abstract class Pessoa {
         return cpf;
     }
 
-    public LocalDateTime getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
     

@@ -23,6 +23,10 @@ public class Projeto {
     public int getNotaFinal() {
         return notaFinal;
     }
+
+    public String getNome() {
+        return nome;
+    }
     
     
 }

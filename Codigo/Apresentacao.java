@@ -31,23 +31,10 @@ public class Apresentacao {
         return dataHora;
     }
 
-    @Override
-    public double calcularNota() {
-        this.notaFinal = banca.calcularNotaFinal();
-        return notaFinal;
-    }
-
-    @Override
-    public String gerarFeedback() {
-        this.feedback = "Apresentação do projeto " + projeto.getNome() + 
-                       " obteve nota " + notaFinal;
-        return feedback;
-    }
-
     public void avaliar(Jurado jurado, double nota) {
-        banca.getNotasJurados().put(jurado, nota);
-        calcularNota();
-        gerarFeedback();
+        banca.gerarFeedback();
+        
+
     }
     
 }
