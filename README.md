@@ -1,6 +1,8 @@
 # Trabalho-Programa-o-Modular
-TRABALHO DA DISCIPLINA DE PROGRAMAÇÃO MODULAR.
-Integrantes: Josue Carlos Goulart e Luiz Fernando Batista Moreira
+TRABALHO DA DISCIPLINA DE PROGRAMAÇÃO MODULAR.  
+
+Integrantes: Josue Carlos Goulart e Luiz Fernando Batista Moreira.  
+
 ENUNCIADO:
 Você foi convidado para participar do projeto de um sistema para gerenciar um
 Hackathon Universitário, promovido anualmente por várias universidades. Dentre as
