@@ -16,7 +16,8 @@ para manter a coleção de objetos do tipo Equipe e uma classe Apresentacoes
 para representar objetos do tipo Apresentacao. Essas classes de coleção devem
 oferecer métodos para incluir e pesquisar elementos, e devem seguir o padrão de
 projeto Singleton, garantindo que apenas uma instância da coleção seja utilizada ao
-longo do sistema.
+longo do sistema.  
+
 Exemplo no main (não é preciso criar menu):
 ● Cria 2 equipes com 5 alunos cada;
 ● Adiciona um projeto diferente para cada equipe;
