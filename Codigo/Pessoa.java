@@ -25,5 +25,9 @@ public abstract class Pessoa {
     public LocalDate getDataNascimento() {
         return dataNascimento;
     }
+
+    public Instituicao getInstituicao(){
+        return instituicao;
+    }
     
 }

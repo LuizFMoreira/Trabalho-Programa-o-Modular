@@ -26,7 +26,7 @@ public class Equipe {
         return membros;
     }
 
-    public Projeto getProjeto() {
+    public Projeto   getProjeto() {
         return projeto;
     }
 
