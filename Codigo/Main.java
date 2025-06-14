@@ -8,50 +8,50 @@ public class Main {
     public static void main(String[] args) {
         // CRIANDO AS EQUIPES E SEUS MEMBROS
         Equipes equipes = Equipes.getInstance();
-        Equipe equipe1 = new Equipe("Equipe 1");
+        Equipe equipeAlpha = new Equipe("Equipe 1");
         for (int i = 1; i <= 5; i++) {
-            equipe1.adicionarMembro(new Estudante("Aluno " + i));
+            equipeAlpha.adicionarMembro(new Estudante("Aluno " + i));
         }
-        equipes.adicionarEquipe(equipe1);
+        equipes.adicionarEquipe(equipeAlpha);
 
-        Equipe equipe2 = new Equipe("Equipe 2");
+        Equipe equipeBeta = new Equipe("Equipe 2");
         for (int i = 6; i <= 10; i++) {
-            equipe2.adicionarMembro(new Estudante("Aluno " + i));
+            equipeBeta.adicionarMembro(new Estudante("Aluno " + i));
         }
-        equipes.adicionarEquipe(equipe2);
+        equipes.adicionarEquipe(equipeBeta);
 
         // CRIANDOS OS PROJETOS E ORIENTADORES
         Profissional orientador1 = new Profissional("Profissional 1", 5000);
-        Projeto projeto1 = new Projeto("Projeto 1", orientador1, equipe1);
-        equipe1.setProjeto(projeto1);
+        Projeto projeto1 = new Projeto("Projeto 1", orientador1, equipeAlpha);
+        equipeAlpha.setProjeto(projeto1);
 
         Profissional orientador2 = new Profissional("Profissional 2", 5000);
-        Projeto projeto2 = new Projeto("Projeto 2", orientador2, equipe2);
-        equipe2.setProjeto(projeto2);
+        Projeto projeto2 = new Projeto("Projeto 2", orientador2, equipeBeta);
+        equipeBeta.setProjeto(projeto2);
 
         // CRIANDO AS BANCAS DE JURADOS
-        Banca banca1 = new Banca(projeto1);
+        Banca bancaLambida = new Banca(projeto1);
         for (int i = 1; i <= 4; i++) {
-            banca1.adicionarJurado(new Jurado("Jurado " + i, 7 + i));
+            bancaLambida.adicionarJurado(new Jurado("Jurado " + i, 7 + i));
         }
 
-        Banca banca2 = new Banca(projeto2);
+        Banca bancaDelta = new Banca(projeto2);
         for (int i = 1; i <= 4; i++) {
-            banca2.adicionarJurado(new Jurado("Jurado " + i, 6 + i));
+            bancaDelta.adicionarJurado(new Jurado("Jurado " + i, 6 + i));
         }
 
         // ESTOU CALCULANDO AS NOTAS FINAIS DOS PROJETOS
-        banca1.calcularNotaFinal();
-        banca2.calcularNotaFinal();
+        bancaLambida.calcularNotaFinal();
+        bancaDelta.calcularNotaFinal();
 
         // ADICIONAR APRESENTAÇÕES 
         Sala sala1 = new Sala("Sala 1");
-        Apresentacao apresentacao1 = new Apresentacao(projeto1, banca1, sala1, LocalDateTime.now());
+        Apresentacao apresentacao1 = new Apresentacao(projeto1, bancaLambida, sala1, LocalDateTime.now());
         Apresentacoes apresentacoes = Apresentacoes.getInstance();
         apresentacoes.adicionarApresentacao(apresentacao1);
 
         Sala sala2 = new Sala("Sala 2");
-        Apresentacao apresentacao2 = new Apresentacao(projeto2, banca2, sala2, LocalDateTime.now());
+        Apresentacao apresentacao2 = new Apresentacao(projeto2, bancaDelta, sala2, LocalDateTime.now());
         apresentacoes.adicionarApresentacao(apresentacao2);
 
         // LISTAGEM DOS PROJETOS COM NOTA SUPERIOR OU IGUAL A 7

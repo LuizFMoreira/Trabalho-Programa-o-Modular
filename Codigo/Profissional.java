@@ -1,16 +1,13 @@
 package Codigo;
 
-public class Profissional {
-    private String nome;
+import java.time.LocalDate;
+
+public class Profissional extends Pessoa {
     private double salario;
 
-    public Profissional(String nome, double salario) {
-        this.nome = nome;
+    public Profissional(String nome, String cpf, LocalDate dataNascimento, double salario) {
+        super(nome, cpf, dataNascimento);
         this.salario = salario;
-    }
-
-    public String getNome() {
-        return nome;
     }
 
     public double getSalario() {
