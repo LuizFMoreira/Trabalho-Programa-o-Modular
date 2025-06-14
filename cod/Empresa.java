@@ -1,5 +1,4 @@
-package Codigo;
-
+package cod;
 public class Empresa extends Instituicao{
     protected String cnpj;
     protected String qntFuncionarios;

@@ -1,5 +1,4 @@
-package Codigo;
-
+package cod;
 public class Sala {
     private String nome;
 

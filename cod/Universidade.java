@@ -1,5 +1,4 @@
-package Codigo;
-
+package cod;
 public class Universidade extends Instituicao { 
     private double tamanho;
 

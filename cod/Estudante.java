@@ -1,5 +1,4 @@
-package Codigo;
-
+package cod;
 import java.time.LocalDate;
 
 public class Estudante extends Pessoa {

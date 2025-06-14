@@ -1,5 +1,4 @@
-package Codigo;
-
+package cod;
 public abstract class Instituicao {
     protected String nome;
     

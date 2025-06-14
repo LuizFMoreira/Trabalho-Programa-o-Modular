@@ -1,5 +1,4 @@
-package Codigo;
-
+package cod;
 public class Projeto {
     private String nome;
     private Profissional orientador;
