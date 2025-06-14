@@ -1,14 +1,14 @@
 package Codigo;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Apresentacao {
     private Projeto projeto;
     private Banca banca;
     private Sala local;
-    private LocalDateTime dataHora;
+    private LocalDate dataHora;
 
-    public Apresentacao(Projeto projeto, Banca banca, Sala local, LocalDateTime dataHora) {
+    public Apresentacao(Projeto projeto, Banca banca, Sala local, LocalDate dataHora) {
         this.projeto = projeto;
         this.banca = banca;
         this.local = local;
@@ -27,7 +27,7 @@ public class Apresentacao {
         return local;
     }
 
-    public LocalDateTime getDataHora() {
+    public LocalDate getDataHora() {
         return dataHora;
     }
 

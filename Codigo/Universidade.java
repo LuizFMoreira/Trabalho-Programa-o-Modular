@@ -1,18 +1,14 @@
 package Codigo;
 
-import java.util.ArrayList;
-
 public class Universidade extends Instituicao { 
-    private ArrayList<String> cursos;
+    private double tamanho;
 
-    public Universidade(String nome, ArrayList<Pessoa> pessoas, ArrayList<String> cursos) {
-        super(nome, pessoas);
-        this.cursos = cursos;
+    public Universidade(String nome, double tamanho) {
+        super(nome);
+        this.tamanho = tamanho;
     }
 
-    public ArrayList<String> getCursos() {
-        return cursos;
+    public double getTamanho() {
+        return tamanho;
     }
-    
-    
 }

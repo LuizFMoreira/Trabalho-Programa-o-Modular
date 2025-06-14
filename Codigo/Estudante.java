@@ -1,13 +1,16 @@
 package Codigo;
 
-public class Estudante {
-    private String nome;
+import java.time.LocalDate;
 
-    public Estudante(String nome) {
-        this.nome = nome;
+public class Estudante extends Pessoa {
+   private String matricula;
+
+    public Estudante(String matricula, String nome, String cpf, LocalDate dataNascimento) {
+        super(nome, cpf, dataNascimento);
+        this.matricula = matricula;
     }
 
-    public String getNome() {
-        return nome;
+    public String getMatricula() {
+        return matricula;
     }
 }

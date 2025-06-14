@@ -24,11 +24,12 @@ public class Projeto {
         return notaFinal;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public void setNotaFinal(int notaFinal) {
         this.notaFinal = notaFinal;
     }
 
-    public String getNome() {
-        return nome;
-    }
 }
